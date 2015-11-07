@@ -1,5 +1,9 @@
 cmake_minimum_required (VERSION 2.6)
 
 project(main)
+if(MSVC)
+	add_definitions(-DUNICODE -D_UNICODE)
+	set(CMAKE_MFC_FLAG 1)
+endif()
 set(main_SRCS main.cpp)
 add_executable(main ${main_SRCS})
