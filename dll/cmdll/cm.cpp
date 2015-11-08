@@ -1,7 +1,8 @@
 
 #include "cm.h"
+#include <cmlib.h>
 
-int CmAdd(int a,int b)
+extern "C" int CmAdd(int a,int b)
 {
-	return a + b;
+	return EncapLib(a) + EncapLib(b);
 }
